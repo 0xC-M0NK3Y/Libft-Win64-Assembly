@@ -4,18 +4,17 @@ section .text
 
 global ft_memset
 
-; /!\ Don't work good /!\
-;     Need a fix, it memset good but last caracteres are lost !
-
 ;void *ft_memset(void *s, int c, size_t n);
 ft_memset:
     mov rax, rcx
+    mov r9, rcx
     xor rcx, rcx
     mov r15, rdx
 
 for1:
-    mov [rax+rcx], r15
+    mov BYTE [r9], r15b
     inc rcx
+    inc r9
     cmp rcx, r8
     jne for1
 
