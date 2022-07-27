@@ -17,15 +17,15 @@ wine prog.exe
 
 Example of main.c :
 
-#include <stdio.h>
+	#include <stdio.h>
 
-// Don't forget to add the prototype of the function, they are in comment in the .asm file
-int ft_strlen(char *s);
+	// Don't forget to add the prototype of the function, they are in comment in the .asm file
+	int ft_strlen(char *s);
 
-int main(int argc, char **argv)
-{
-  char str[] = "Bonjour a tous";
-  int size = ft_strlen(str);
-  printf("Size of %s is %d\n", str, size);
-  return 0;
-}
+	int main(int argc, char ** argv)
+	{
+		char str[] = "Bonjour a tous";
+		int size = ft_strlen(str);
+		printf("Size of %s is %d\n", str, size);
+		return 0;
+	}
