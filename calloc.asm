@@ -1,10 +1,6 @@
 bits 64
 
 extern malloc
-extern printf
-
-section .data
-    frm db '%d', 0
 
 section .text
 
@@ -30,8 +26,4 @@ for1:
     cmp rcx, r15
     jne for1
 
-    ret
-
-null:
-    xor rax, rax
     ret
