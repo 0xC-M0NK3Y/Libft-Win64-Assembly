@@ -7,13 +7,13 @@ The functions works and can be exported in C.
 Example of exporting a function in C :
 
 Create the .obj file
-nasm -f win64 ft_strlen.asm
+	nasm -f win64 ft_strlen.asm
 
 And compile with your .c file
-x86_64-w64-mingw32-gcc main.c ft_strlen.obj -o prog.exe
+	x86_64-w64-mingw32-gcc main.c ft_strlen.obj -o prog.exe
 
 I recommend for linux user to use wine
-wine prog.exe
+	wine prog.exe
 
 Example of main.c :
 
